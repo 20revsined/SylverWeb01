@@ -40,15 +40,23 @@ class SylverChat(SylverChatTemplate):
     number = int(input("Please enter the number of users you want to invite.\n"))
     x = 0
     
+    LoggedInUser = anvil.users.get_user()
+    
     while x < number:
       user = str(input("Please enter the email of each user you want to invite.\n"))
-      if anvil.users.get_user()['email'] == user:
-        TicketList.update({user: password})
-        print("User successfully added!\n")
-        x = x + 1
       
-      else:
-        print("This user does not exist. Please enter an email associated with an existing user.\n")
+      for person in app_tables.users.search(tables.order_by("email")):
+        if user == LoggedInUser['email'] and user == person['email']:
+          print("You cannot invite yourself to your own chat room.")
+        
+        elif not user == LoggedInUser['email'] and user == person['email']:
+          TicketList.update({user: password})
+          print("User successfully added!\n")
+          x = x + 1
+          break
+        
+        else:
+          print("This user does not exist. Please enter an email associated with an existing user.\n")
     pass
 
   #join a chat
