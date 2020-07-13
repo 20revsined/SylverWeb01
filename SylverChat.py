@@ -118,7 +118,7 @@ class SylverChat(SylverChatTemplate):
   
   #video chat
   def button_4_click(self, **event_args):
-    SylverVideoCall.VideoCall()
+    SylverVideoCall.CreateVideoCall()
     pass
 
 
