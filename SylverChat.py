@@ -10,8 +10,8 @@ from anvil.tables import app_tables
 from ..SylverLogin import SylverLogin
 from ..SylverMovies import SylverMovies
 from ..SylverVideoCall import SylverVideoCall
-import anvil.http
-import webbrowser
+#import anvil.http
+#import webbrowser
 
 login = SylverLogin()
 movies = SylverMovies()
@@ -118,7 +118,8 @@ class SylverChat(SylverChatTemplate):
   
   #video chat
   def button_4_click(self, **event_args):
-    SylverVideoCall.CreateVideoCall()
+    #SylverVideoCall.CreateVideoCall()
+    SylverVideoCall.MakeVideoCall(VideoCall)
     pass
 
 
