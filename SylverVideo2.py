@@ -59,4 +59,5 @@ def CreateVideoCall():
 
 CreateVideoCall()
 
-#sources: https://stackoverflow.com/questions/38380462/syntaxerror-unexpected-token-o-in-json-at-position-1/38380728, https://docs.daily.co/reference#set-room-configuration, https://docs.daily.co/reference#create-room
+#sources: https://stackoverflow.com/questions/38380462/syntaxerror-unexpected-token-o-in-json-at-position-1/38380728, https://docs.daily.co/reference#set-room-configuration, https://docs.daily.co/reference#create-room,
+#https://python-forum.io/Thread-Python-redirect-users-to-another-url-after-form-post, https://stackoverflow.com/questions/1841565/valueerror-invalid-literal-for-int-with-base-10
