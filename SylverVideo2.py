@@ -53,7 +53,7 @@ def CreateVideoCall():
 
   response = requests.request("POST", url, data=information, headers=headers)
 
-  print(response.text)
+  #print(response.text)
       
   webbrowser.open(url2)
 
